@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  .background {
+    background-color: mat.get-theme-color($theme, surface);
+  }
+  .title {
+    color: mat.get-theme-color($theme, on-surface);
+  }
+}
+
+@mixin typography($theme) {
+  .title {
+    font: mat.get-theme-typography($theme, headline-large, font);
+  }
+}
+
