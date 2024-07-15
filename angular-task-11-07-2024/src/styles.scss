@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+@use '@angular/material' as mat;
+@use 'app/pages/products-page/_products-page-theme.scss' as products-page;
+
+@include mat.core();
+
+$my-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  )
+));
+
+html {
+  @include products-page.typography($my-theme);
+  @include products-page.color($my-theme);
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
