@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {
   MatCard, MatCardActions,
   MatCardContent,
@@ -8,6 +8,7 @@ import {
   MatCardTitle
 } from "@angular/material/card";
 import {MatButton} from "@angular/material/button";
+import {ProductResponse} from "../services/product-response";
 
 @Component({
   selector: 'app-product-card',
@@ -27,4 +28,8 @@ import {MatButton} from "@angular/material/button";
 })
 export class ProductCardComponent {
 
+  @Input() title: string = "";
+  @Input() category: string = "";
+  @Input() image: string = "";
+  @Input() description: string = "";
 }

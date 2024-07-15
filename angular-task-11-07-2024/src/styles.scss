@@ -2,7 +2,7 @@
 
 
 @use '@angular/material' as mat;
-@use 'app/_app-theme.scss' as app-theme;
+@use 'app/pages/products-page/_products-page-theme.scss' as products-page;
 
 @include mat.core();
 
@@ -15,8 +15,8 @@ $my-theme: mat.define-theme((
 ));
 
 html {
-  @include app-theme.color($my-theme);
-  @include app-theme.typography($my-theme);
+  @include products-page.typography($my-theme);
+  @include products-page.color($my-theme);
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
